@@ -1,0 +1,32 @@
+body {
+  margin: 5%;
+  font-family: "Gill Sans", "Gill Sans MT";
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 1em;
+}
+
+.entry-textbox {
+  background: #ffa62b;
+  width: 20em;
+  height: 10em;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: unset;
+  border-radius: 10px;
+}
+
+.entry-textbox:focus {
+  outline: none;
+  border: 2px solid;
+}
+
+.button {
+  padding: 0.2em 0.5em;
+  margin-left: 76%;
+  border: unset;
+  border-radius: 10px;
+}
