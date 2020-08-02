@@ -6,14 +6,17 @@ const $entriesNav = document.querySelector(".entries-nav");
 let count = 1;
 const addEntryToDom = (event) => {
   event.preventDefault();
-
-  $entries.innerHTML += `<div class='entry'> ${$entryTextBox.value}</div>`;
-  const $entry = document.getElementsByClassName("entry");
-  $entry.innerText = $entryTextBox.value;
+  const $singleEntry = document.createElement("div");
+  $singleEntry.className = "single-entry";
+  $singleEntry.innerText = $entryTextBox.value;
+  $entries.appendChild($singleEntry);
   $entryTextBox.value = "";
-  $entry[count - 1].style.display = "none";
+  $singleEntry.style.display = "none";
 
-  $entriesNav.innerHTML += `<button class='entries-button'>${count}</button>`;
+  const $displayEntryButton = document.createElement("button");
+  $displayEntryButton.className = "entry-button";
+  $displayEntryButton.innerText = count;
+  $entriesNav.appendChild($displayEntryButton);
   count++;
 };
 
