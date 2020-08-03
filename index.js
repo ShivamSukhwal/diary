@@ -17,6 +17,13 @@ const addEntryToDom = (event) => {
   $displayEntryButton.className = "entry-button";
   $displayEntryButton.innerText = count;
   $entriesNav.appendChild($displayEntryButton);
+
+  $displayEntryButton.addEventListener("click", function () {
+    $singleEntry.style.display === "block"
+      ? ($singleEntry.style.display = "none")
+      : ($singleEntry.style.display = "block");
+  });
+
   count++;
 };
 
